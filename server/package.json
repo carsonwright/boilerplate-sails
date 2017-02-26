@@ -1,8 +1,7 @@
 {
   "name": "server",
-  "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "",
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
@@ -28,10 +27,6 @@
     "start": "node app.js"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/carsonnwright/server.git"
-  },
   "author": "carsonnwright",
   "license": ""
 }
