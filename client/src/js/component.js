@@ -5,7 +5,6 @@ class Component extends React.Component {
         super(props);
         let controller = props.controller
         let com = this;
-        
         controller = controller ? new controller(this) : {}
         methods = Array.isArray(methods) ? methods : [];
 

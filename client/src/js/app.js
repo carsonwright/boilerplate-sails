@@ -2,6 +2,7 @@ import React from 'react';
 import routes from './react/config/routes';
 import PageJS from 'page';
 import state from './react/config/state';
+import extend from './extend';
 
 class App extends React.Component {
     constructor(){
@@ -12,7 +13,7 @@ class App extends React.Component {
     componentWillMount(){
         let com = this;
         App.refresh = function(){
-            com.setState(App.state);
+            com.setState(extend(App.state));
         }
 
         Object.keys(routes).forEach((route)=>{
@@ -28,7 +29,7 @@ class App extends React.Component {
     
     render(){
         let defaultComponent = <div></div>
-        return React.createElement(App.state.page || defaultComponent, App.state);
+        return React.createElement(this.state.page || defaultComponent, this.state);
     }
 }
 
