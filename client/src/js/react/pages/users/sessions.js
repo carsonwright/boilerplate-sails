@@ -1,8 +1,16 @@
 import React from 'react';
+import Component from '../../config/component';
+import SignInForm from './_sign_in_form';
+import SignInController from '../../controllers/signin';
 
-class Page extends React.Component {
+class Page extends Component {
     render(){
-        return <div>Sessions</div>
+        return (
+            <div>
+                Sessions
+                <SignInForm controller={SignInController} />
+            </div>
+        );
     }
 }
 

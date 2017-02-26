@@ -1,9 +1,9 @@
 import React from 'react';
-import routes from './config/routes';
+import routes from './react/config/routes';
 import PageJS from 'page';
-import state from './config/state';
+import state from './react/config/state';
 
-class Page extends React.Component {
+class App extends React.Component {
     constructor(){
         super();
         App.state = state;
@@ -32,4 +32,4 @@ class Page extends React.Component {
     }
 }
 
-export default Page;
+export default App;
