@@ -1,0 +1,65 @@
+@import './variables';
+#page{
+    overflow: hidden;
+    width: 100%;
+}
+
+a{
+    color: $white;
+}
+
+#app{
+    padding: 8px;
+    background-color: $appBackground;
+    background-size: 500px;
+    height: 100%;
+    width: 100%;
+    color: $appColor;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.form{
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.input{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: .8em;
+    color: $inputColor;
+    &::placeholder{
+        color: $placeHolderColor;
+    }
+}
+
+.textInput{
+    background-color: $inputBackgroundColor;
+    border: 0px;
+    padding: .9em 1.2em;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.submit{
+    background-color: transparent;
+    border: 0px;
+    padding: .9em 1.5em;
+    margin: 0px auto;
+    border-radius: 6px;
+    border: 1px solid $submitBorder;
+    color: $submitColor;
+    cursor: pointer;
+}
+
+
+.nav{
+    display: inline-block;
+    padding: .5em 1em;
+    float: right;
+}

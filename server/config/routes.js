@@ -34,7 +34,8 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  '/me': 'UserController.me',
 
   /***************************************************************************
   *                                                                          *
@@ -46,4 +47,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'post /login': 'AuthController.login',
+
+  'delete /logout': 'AuthController.logout'
 };

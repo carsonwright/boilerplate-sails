@@ -1,8 +1,11 @@
 var path = require('path');
-var FlowtypePlugin = require('flowtype-loader/plugin');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: './src/lib/index.js',
+  resolve: {
+    extensions: [".jsx", ".js", ".json", ".scss"]
+  },
+
   module: {
     loaders: [
       {
@@ -11,20 +14,14 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react'],
-          plugins: [    
-            "syntax-flow",
-            "tcomb",
-            "transform-flow-strip-types"
-          ]
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: "style-loader!css-loader?modules!sass-loader"
       }
     ]
   },
-  plugins: [
-    new FlowtypePlugin()
-    // new FlowtypePlugin({cwd: '/path/'})
-    // new FlowtypePlugin({failOnError: true})
-  ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')

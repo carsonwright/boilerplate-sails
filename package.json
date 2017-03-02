@@ -4,9 +4,12 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"npm start --prefix client & npm start --prefix server",
+    "start": "npm start --prefix client & npm start --prefix server",
     "install": "npm install --prefix client & npm install --prefix server"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "immutable": "^3.8.1"
+  }
 }

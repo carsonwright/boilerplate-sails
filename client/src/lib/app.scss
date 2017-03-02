@@ -1,0 +1,33 @@
+#app{}
+.form{}
+.input{};
+.textInput{};
+.submit{};
+#page{};
+.nav{};
+
+@import '../app/config/app';
+
+#appMain{
+    @extend #app;
+    form{
+        @extend .form;
+    }
+    input{
+       @extend .input;
+    }
+    input[type='text'], input[type='password']{
+        @extend .textInput;
+        
+    }
+    input[type='submit']{
+        @extend .submit;
+    }
+    nav{
+        @extend .nav;
+    }
+}
+
+body, html{
+    @extend #page;
+}
